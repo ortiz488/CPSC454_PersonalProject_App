@@ -21,7 +21,10 @@ function App() {
 
   return (
     <main>
-      <button onClick={signOut}>Sign out</button>
+      <div className="app-container">
+        <button onClick={signOut}>Sign Out</button>
+      </div>
+
       <h1>{user?.signInDetails?.loginId}'s moive watch list</h1>
       <h1>My movie watch list</h1>
       <button onClick={createTodo}>+ new</button>

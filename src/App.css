@@ -1,7 +1,8 @@
 body {
   margin: 0;
   padding: 0;
-  background: url('/assets/Movie_background.jpg');
+  background: url('/assets/Movie_background.jpg') no-repeat center center fixed;
+  background-size: cover;
 }
 
 #root {
@@ -48,4 +49,31 @@ body {
 
 .read-the-docs {
   color: #888;
+}
+
+.app-container {
+  position: relative;
+  min-height: 100vh;
+}
+
+/* Pin the sign-out button to bottom-right */
+.signout-btn {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+
+  /* styling */
+  padding: 0.5rem 1rem;
+  background-color: #e63946;
+  /* change to your preferred color */
+  color: #fff;
+  border: none;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transition: background-color 200ms ease-in-out;
+}
+
+.signout-btn:hover {
+  background-color: #d62828;
 }
