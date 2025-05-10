@@ -24,13 +24,16 @@ function App() {
     <main
       style={{
         backgroundImage: `url(${Movie_background})`,   // <-- your page background
+        backgroundRepeat: "no-repeat",      // ← don’t tile
+        backgroundSize: "cover",           // ← fill the screen
+        backgroundPosition: "center",      // ← center it
         minHeight: "100vh",           // fill full viewport
         padding: "2rem",
         textAlign: "center",
         position: "relative",         // for any absolutely-positioned children
       }}
     >
-      <h1>Current signed user = {user?.signInDetails?.loginId}</h1>
+      <h1>Signed in user = {user?.signInDetails?.loginId}</h1>
       <h1>My movie watch list</h1>
 
       <ul>
@@ -40,8 +43,8 @@ function App() {
       </ul>
 
       <div className="app-container">
-        <button onClick={signOut}>Sign Out</button>
         <button onClick={createTodo}>Add Moive</button>
+        <button onClick={signOut}>Sign Out</button>
       </div>
 
     </main>
